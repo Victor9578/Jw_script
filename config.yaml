@@ -1,0 +1,31 @@
+listen: 0.0.0.0:8912
+
+acme:
+  domains:
+    - xxx.com
+  email: victor0907ai1019@gmail.com
+
+bandwidth:
+  up: 1 gbps
+  down: 1 gbps
+
+obfs:
+  type: salamander
+  salamander:
+    password: obfsjaywxlla
+
+quic:
+  initStreamReceiveWindow: 26843545 
+  maxStreamReceiveWindow: 26843545 
+  initConnReceiveWindow: 67108864 
+  maxConnReceiveWindow: 67108864
+
+auth:
+  type: password
+  password: jaywxlla
+
+masquerade:
+  type: proxy
+  proxy:
+    url: https://www.tiktok.com/explore
+    rewriteHost: true

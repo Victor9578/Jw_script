@@ -1,0 +1,50 @@
+{
+    "log": {
+        "loglevel": "debug"
+    },
+    "inbounds": [
+        {
+            "port": 58912,
+            "protocol": "vless",
+	    "listen": "ipv4/ipv6",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "f0ad6be4-ffd9-49c6-8f3e-c39ca72b07ff", 
+                        "flow": "xtls-rprx-vision"
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "tcp",
+                "security": "reality",
+                "realitySettings": {
+                    "dest": "ennocheng.space:443", 
+                    "serverNames": [
+                        "ennocheng.space"
+                    ],
+                    "privateKey": "IICwqte42X9McTB_Kwee1rsHUWL3LJOocouWdYY8flw", 
+                    "shortIds": [
+                        "200097"
+                    ]
+                }
+            },
+            "sniffing": {
+                "enabled": true,
+                "destOverride": [
+                    "http",
+                    "tls",
+                    "quic"
+                ],
+                "routeOnly": true
+            }
+        }
+    ],
+    "outbounds": [
+        {
+            "protocol": "freedom",
+            "tag": "direct"
+        }
+    ]
+}
